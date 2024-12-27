@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DaurulangActivity">
+
+    <!-- Header Layout -->
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/skygreen"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center"
+            android:text="Sampah Daur Ulang"
+            android:layout_marginLeft="23dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="274dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/daurulang" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <!-- Description Text (TextView 3) -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Sampah daur ulang adalah sampah yang masih memiliki nilai guna dan bisa diolah kembali menjadi produk baru tanpa melalui kerusakan struktur bahan dasar. Contoh: Kertas, kardus, botol kaca, kaleng aluminium, dan beberapa jenis plastik yang dapat didaur ulang."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <!-- Additional Information Text (TextView 4) -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="cara memilah:\n 1.  Pisahkan sampah daur ulang sesuai jenis materialnya (misalnya, kertas,\n     plastik, dan kaca).\n 2. pastikan sampah tersebut dalam kondisi bersih sebelum dikirim ke\n     fasilitas daur ulang."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Metode Pengolahan:  Sampah daur ulang diolah di pabrik daur ulang. Misalnya, kertas dan karton diolah menjadi kertas daur ulang, dan plastik diubah menjadi pelet plastik yang bisa digunakan sebagai bahan baku produk baru. Daur ulang ini mengurangi konsumsi sumber daya alam baru dan membantu mengurangi sampah."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="DAMPAK SAMPAH JIKA TIDAK DIOLAH:\n • Pencemaran Lingkungan: Proses daur ulang yang buruk mencemari\n    tanah, air, atau udara.\n • Bahaya Kesehatan: Limbah daur ulang dapat menyebabkan\n    gangguan pernapasan atau penyakit.\n • Pemborosan: Tanpa pengelolaan tepat, potensi manfaat daur ulang\n    hilang, memperburuk limbah.\n • Mikroplastik: Pengolahan plastik yang salah menghasilkan\n    mikroplastik yang merusak ekosistem."
+            android:textAlignment="textStart"
+            android:textColor="@color/B3"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

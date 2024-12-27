@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#3D7338</color>
+    <color name="background">#C3EDBF</color>
+    <color name="red">#FF0505</color>
+    <color name="darkgreen">#276561</color>
+    <color name="skygreen">#75A478</color>
+    <color name="btngreen">#4F8D5C</color>
+    <color name="notifnonlogam">#5FFD6C</color>
+    <color name="organik">#23BB2D</color>
+    <color name="notiflogam">#FBEF6B</color>
+    <color name="anorganik">#E3DC13</color>
+    <color name="B3">#F22424</color>
+    <color name="Daurulang">#3316DB</color>
+    <color name="Elektronik">#6E766E</color>
+</resources>

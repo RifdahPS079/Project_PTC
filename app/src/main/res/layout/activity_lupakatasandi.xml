@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".LupakatasandiActivity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_lupa_kata_sandi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Lupa Kata Sandi"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emaillupasandi"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppinsmedium"
+        android:hint="Masukkan email Anda"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_lupa_kata_sandi" />
+
+    <EditText
+        android:id="@+id/katasandibaru"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppinsmedium"
+        android:hint="Kata Sandi Baru"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emaillupasandi" />
+
+    <EditText
+        android:id="@+id/konfirmasikatasandibaru"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_shape"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppinsmedium"
+        android:hint="Konfirmasi Kata Sandi"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/katasandibaru" />
+
+    <Button
+        android:id="@+id/btn_reset_kata_sandi"
+        android:layout_width="329dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Reset Kata Sandi"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/konfirmasikatasandibaru" />
+
+    <TextView
+        android:id="@+id/link_kembali_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Kembali ke Login"
+        android:textColor="@color/green"
+        android:textSize="12sp"
+        android:padding="16dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_reset_kata_sandi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

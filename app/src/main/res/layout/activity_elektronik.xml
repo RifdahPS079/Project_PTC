@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ElektronikActivity">
+
+    <!-- Header Layout -->
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@color/skygreen"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppinssemibold"
+            android:gravity="center"
+            android:text="Sampah Elektronik"
+            android:layout_marginLeft="23dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="274dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elektronik" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <!-- Description Text (TextView 3) -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Sampah elektronik, atau e-waste, adalah barang-barang elektronik yang sudah tidak berfungsi atau tidak lagi digunakan. Sampah ini mengandung komponen berbahaya, seperti logam berat dan bahan kimia beracun, tetapi juga memiliki bahan yang bisa didaur ulang. Contoh: Ponsel, komputer, televisi, printer, dan perangkat elektronik lainnya."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <!-- Additional Information Text (TextView 4) -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="cara memilah:\n 1.  Kumpulkan sampah elektronik secara terpisah di wadah khusus.\n 2. Sebaiknya disimpan di tempat kering dan aman sampai bisa dibawa ke\n     pusat pengumpulan atau fasilitas daur ulang elektronik."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Metode Pengolahan:  E-waste diolah di fasilitas pengolahan khusus yang memilah komponen berbahaya dan mengekstraksi logam berharga, seperti emas, perak, dan tembaga. Komponen yang tidak dapat didaur ulang biasanya dihancurkan dengan aman sesuai standar lingkungan, sementara bahan yang masih bernilai dapat diolah menjadi komponen baru."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="DAMPAK SAMPAH JIKA TIDAK DIOLAH:\n • Polusi Lingkungan: Logam berat dari sampah elektronik mencemari\n    air, tanah, dan udara, merusak ekosistem.\n • Gangguan Kesehatan: Paparan bahan beracun dari sampah\n    elektronik dapat menyebabkan gangguan pernapasan dan saraf.\n • Kecelakaan: Komponen mudah terbakar berisiko menyebabkan\n    kebakaran atau ledakan."
+            android:textAlignment="textStart"
+            android:textColor="@color/B3"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
