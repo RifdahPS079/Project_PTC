@@ -2,7 +2,6 @@ package com.example.akhirtolong;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,11 +21,22 @@ public class LokasiActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_lokasi);
 
+        // Ambil data nama pengguna dari Intent
+
+
         // Tombol kembali
         ImageView arrowBack = findViewById(R.id.back);
         arrowBack.setOnClickListener(view -> {
-            // Kembali ke HomeActivity
+            // Kembali ke HomeActivity dengan membawa data nama pengguna
             Intent intent = new Intent(LokasiActivity.this, HomeActivity.class);
+            String nama = getIntent().getStringExtra("nama");
+            String email = getIntent().getStringExtra("email");
+            String password = getIntent().getStringExtra("password");
+            String confPass = getIntent().getStringExtra("confpassword");
+            intent.putExtra("nama", nama);
+            intent.putExtra("email", email);
+            intent.putExtra("password", password);
+            intent.putExtra("confpassword", confPass);
             startActivity(intent);
             finish();
         });

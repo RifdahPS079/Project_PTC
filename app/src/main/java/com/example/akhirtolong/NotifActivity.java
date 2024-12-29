@@ -1,5 +1,6 @@
 package com.example.akhirtolong;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -38,6 +39,25 @@ public class NotifActivity extends AppCompatActivity {
 
         // Ambil dan tampilkan notifikasi yang sudah ada dari Firebase
         loadExistingNotifications();
+
+        ImageView arrowBack = findViewById(R.id.back);
+        arrowBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Kembali ke MainActivity
+                Intent intent = new Intent(NotifActivity.this, HomeActivity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         // Tambahkan listener untuk mendengarkan perubahan status sensor
         sensorRef.addValueEventListener(new ValueEventListener() {

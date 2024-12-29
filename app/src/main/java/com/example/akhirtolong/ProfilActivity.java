@@ -31,7 +31,7 @@ public class ProfilActivity extends AppCompatActivity {
     private ActivityResultLauncher<Intent> cameraLauncher;
 
     // Variabel untuk data profil
-    private String nama, email, password;
+    private String nama, email, password, conf_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,7 @@ public class ProfilActivity extends AppCompatActivity {
         nama = getIntent().getStringExtra("nama");
         email = getIntent().getStringExtra("email");
         password = getIntent().getStringExtra("password");
+        conf_password = getIntent().getStringExtra("confpassword");
 
         // Menampilkan data pada TextView
         titlenama.setText(nama);
@@ -94,6 +95,7 @@ public class ProfilActivity extends AppCompatActivity {
                 intent.putExtra("nama", nama); // Mengirimkan nama
                 intent.putExtra("email", email); // Mengirimkan email
                 intent.putExtra("password", password); // Mengirimkan password
+                intent.putExtra("confpassword", conf_password);
                 startActivity(intent); // Memulai EditProfilActivity
             }
         });
@@ -116,6 +118,14 @@ public class ProfilActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Kembali ke MainActivity
                 Intent intent = new Intent(ProfilActivity.this, HomeActivity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
                 startActivity(intent);
                 finish();
             }

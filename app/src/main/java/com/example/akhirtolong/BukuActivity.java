@@ -10,6 +10,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class BukuActivity extends AppCompatActivity {
@@ -18,14 +19,26 @@ public class BukuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+
         setContentView(R.layout.activity_buku);
 
+        String nama = getIntent().getStringExtra("nama");
+        String email = getIntent().getStringExtra("email");
+        String password = getIntent().getStringExtra("password");
+        String confPass = getIntent().getStringExtra("confpassword");
         ImageView arrowBack = findViewById(R.id.back);
         arrowBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Kembali ke MainActivity
                 Intent intent = new Intent(BukuActivity.this, HomeActivity.class);
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
+
                 startActivity(intent);
                 finish();
             }
@@ -36,6 +49,14 @@ public class BukuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BukuActivity.this, OrganikActivity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
                 startActivity(intent);
             }
         });
@@ -45,6 +66,14 @@ public class BukuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BukuActivity.this, AnorganikActivity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
                 startActivity(intent);
             }
         });
@@ -54,6 +83,14 @@ public class BukuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BukuActivity.this, B3Activity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
                 startActivity(intent);
             }
         });
@@ -63,6 +100,14 @@ public class BukuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BukuActivity.this, DaurulangActivity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
                 startActivity(intent);
             }
         });
@@ -72,6 +117,14 @@ public class BukuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BukuActivity.this, ElektronikActivity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
                 startActivity(intent);
             }
         });

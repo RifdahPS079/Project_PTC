@@ -25,6 +25,14 @@ public class B3Activity extends AppCompatActivity {
             public void onClick(View view) {
                 // Kembali ke MainActivity
                 Intent intent = new Intent(B3Activity.this, BukuActivity.class);
+                String nama = getIntent().getStringExtra("nama");
+                String email = getIntent().getStringExtra("email");
+                String password = getIntent().getStringExtra("password");
+                String confPass = getIntent().getStringExtra("confpassword");
+                intent.putExtra("nama", nama);
+                intent.putExtra("email", email);
+                intent.putExtra("password", password);
+                intent.putExtra("confpassword", confPass);
                 startActivity(intent);
                 finish();
             }

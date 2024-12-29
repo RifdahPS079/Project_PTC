@@ -98,25 +98,19 @@ public class RegistrasiActivity extends AppCompatActivity {
 
         // Link Masuk akan membawa ke LoginActivity
         TextView linkMasuk = findViewById(R.id.link_login);
-        linkMasuk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Berpindah ke LoginActivity
-                Intent intent = new Intent(RegistrasiActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
+        linkMasuk.setOnClickListener(view -> {
+            // Berpindah ke LoginActivity
+            Intent intent = new Intent(RegistrasiActivity.this, LoginActivity.class);
+            startActivity(intent);
         });
 
         // Ikon panah ke belakang akan kembali ke MainActivity
         ImageView arrowBack = findViewById(R.id.back);
-        arrowBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Kembali ke MainActivity
-                Intent intent = new Intent(RegistrasiActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        arrowBack.setOnClickListener(view -> {
+            // Kembali ke MainActivity
+            Intent intent = new Intent(RegistrasiActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         });
     }
 }

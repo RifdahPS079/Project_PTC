@@ -2,8 +2,6 @@ package com.example.akhirtolong;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -26,21 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         //KLIK MASUK
         Button btnMasuk = findViewById(R.id.btn_login);
-        btnMasuk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-            }
-        });
+        btnMasuk.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
 
         //KLIK DAFTAR
         Button btnDaftar = findViewById(R.id.btn_regis);
-        btnDaftar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RegistrasiActivity.class));
-            }
-        });
+        btnDaftar.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, RegistrasiActivity.class)));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

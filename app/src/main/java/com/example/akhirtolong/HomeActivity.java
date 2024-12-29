@@ -7,7 +7,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -123,22 +122,77 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void openBukuActivity() {
-        startActivity(new Intent(this, BukuActivity.class));
+        Intent intent = new Intent(this, BukuActivity.class);
+        // Kirim data nama pengguna
+        String nama = getIntent().getStringExtra("nama");
+        String email = getIntent().getStringExtra("email");
+        String password = getIntent().getStringExtra("password");
+        String confPass = getIntent().getStringExtra("confpassword");
+        intent.putExtra("nama", nama);
+        intent.putExtra("email", email);
+        intent.putExtra("password", password);
+        intent.putExtra("confpassword", confPass);
+        startActivity(intent);
     }
 
     private void openLokasiActivity() {
-        startActivity(new Intent(this, LokasiActivity.class));
+        Intent intent = new Intent(this, LokasiActivity.class);
+
+        // Kirim data nama pengguna
+        String nama = getIntent().getStringExtra("nama");
+        String email = getIntent().getStringExtra("email");
+        String password = getIntent().getStringExtra("password");
+        String confPass = getIntent().getStringExtra("confpassword");
+        intent.putExtra("nama", nama);
+        intent.putExtra("email", email);
+        intent.putExtra("password", password);
+        intent.putExtra("confpassword", confPass);
+        startActivity(intent);
     }
 
+
     private void openJadwalActivity() {
-        startActivity(new Intent(this, JadwalActivity.class));
+        Intent intent = new Intent(this, JadwalActivity.class);
+
+        // Kirim data nama pengguna
+        String nama = getIntent().getStringExtra("nama");
+        String email = getIntent().getStringExtra("email");
+        String password = getIntent().getStringExtra("password");
+        String confPass = getIntent().getStringExtra("confpassword");
+        intent.putExtra("nama", nama);
+        intent.putExtra("email", email);
+        intent.putExtra("password", password);
+        intent.putExtra("confpassword", confPass);
+        startActivity(intent);
     }
 
     private void openJemputActivity() {
-        startActivity(new Intent(this, JemputActivity.class));
+        Intent intent = new Intent(this, JemputActivity.class);
+
+        // Kirim data nama pengguna
+        String nama = getIntent().getStringExtra("nama");
+        String email = getIntent().getStringExtra("email");
+        String password = getIntent().getStringExtra("password");
+        String confPass = getIntent().getStringExtra("confpassword");
+        intent.putExtra("nama", nama);
+        intent.putExtra("email", email);
+        intent.putExtra("password", password);
+        intent.putExtra("confpassword", confPass);
+        startActivity(intent);
     }
 
     private void openNotifActivity() {
-        startActivity(new Intent(this, NotifActivity.class));
+        Intent intent = new Intent(this, NotifActivity.class);
+
+        // Kirim data nama pengguna
+        String nama = getIntent().getStringExtra("nama");
+        String email = getIntent().getStringExtra("email");
+        String password = getIntent().getStringExtra("password");
+        String confPass = getIntent().getStringExtra("confpassword");
+        intent.putExtra("nama", nama);
+        intent.putExtra("email", email);
+        intent.putExtra("password", password);
+        intent.putExtra("confpassword", confPass);
+        startActivity(intent);
     }
 }
